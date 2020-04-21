@@ -2,7 +2,7 @@
 
 
 Hello Quantum Geeks!
-I am beginning to upload some new of my projects!
+I am beginning to upload some of my projects in here!
 
 Stay tuned!
 Cheers!
