@@ -1,0 +1,266 @@
+import qiskit
+from qiskit import IBMQ
+from qiskit import*
+qr =  QuantumRegister(2)
+cr = ClassicalRegister(2)
+circuit = QuantumCircuit(qr,cr)
+%matplotlib inline
+circuit.draw()
+      
+q8_0: 
+      
+q8_1: 
+      
+c1_0: 
+      
+c1_1: 
+      
+circuit.h(qr[0])
+<qiskit.circuit.instructionset.InstructionSet at 0x23892121bc8>
+circuit.draw()
+      ┌───┐
+q0_0: ┤ H ├
+      └───┘
+q0_1: ─────
+           
+c0_0: ═════
+           
+c0_1: ═════
+           
+circuit.draw(output=mpl)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-11-53ceec1d35e2> in <module>
+----> 1 circuit.draw(output=mpl)
+
+NameError: name 'mpl' is not defined
+circuit.draw(output='mpl')
+
+circuit.cx(qr=[0],qr=[1])
+  File "<ipython-input-13-c94247bd6507>", line 1
+    circuit.cx(qr=[0],qr=[1])
+                     ^
+SyntaxError: keyword argument repeated
+circuit.cx(qr=[0] , qr=[1])
+  File "<ipython-input-14-5dd8cc2856c6>", line 1
+    circuit.cx(qr=[0] , qr=[1])
+                       ^
+SyntaxError: keyword argument repeated
+circuit.cx(qr=[0])
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-15-ef7611edbccf> in <module>
+----> 1 circuit.cx(qr=[0])
+
+C:\ProgramData\Anaconda3\lib\site-packages\qiskit\util.py in wrapper(*args, **kwargs)
+    107             if kwargs:
+    108                 _rename_kwargs(func.__name__, kwargs, kwarg_map)
+--> 109             return func(*args, **kwargs)
+    110         return wrapper
+    111     return decorator
+
+TypeError: cx() got an unexpected keyword argument 'qr'
+circuit.x(qr=[0] , qr=[1])
+  File "<ipython-input-16-8eec21b6f2af>", line 1
+    circuit.x(qr=[0] , qr=[1])
+                      ^
+SyntaxError: keyword argument repeated
+circuit.x(qr=[0])
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-17-cfcdbd1c687a> in <module>
+----> 1 circuit.x(qr=[0])
+
+C:\ProgramData\Anaconda3\lib\site-packages\qiskit\util.py in wrapper(*args, **kwargs)
+    107             if kwargs:
+    108                 _rename_kwargs(func.__name__, kwargs, kwarg_map)
+--> 109             return func(*args, **kwargs)
+    110         return wrapper
+    111     return decorator
+
+TypeError: x() got an unexpected keyword argument 'qr'
+circuit.cx(qr=[0],qr[1])
+  File "<ipython-input-18-6b902cb9dc0d>", line 1
+    circuit.cx(qr=[0],qr[1])
+                     ^
+SyntaxError: positional argument follows keyword argument
+circuit.cx(qr=[0])
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-19-ef7611edbccf> in <module>
+----> 1 circuit.cx(qr=[0])
+
+C:\ProgramData\Anaconda3\lib\site-packages\qiskit\util.py in wrapper(*args, **kwargs)
+    107             if kwargs:
+    108                 _rename_kwargs(func.__name__, kwargs, kwarg_map)
+--> 109             return func(*args, **kwargs)
+    110         return wrapper
+    111     return decorator
+
+TypeError: cx() got an unexpected keyword argument 'qr'
+cicuit.cx(cr=[0])
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-20-599e2056f694> in <module>
+----> 1 cicuit.cx(cr=[0])
+
+NameError: name 'cicuit' is not defined
+circuit.cx(cr=[0])
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-21-10e554763fdf> in <module>
+----> 1 circuit.cx(cr=[0])
+
+C:\ProgramData\Anaconda3\lib\site-packages\qiskit\util.py in wrapper(*args, **kwargs)
+    107             if kwargs:
+    108                 _rename_kwargs(func.__name__, kwargs, kwarg_map)
+--> 109             return func(*args, **kwargs)
+    110         return wrapper
+    111     return decorator
+
+TypeError: cx() got an unexpected keyword argument 'cr'
+circuit.x(cr=[0])
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-22-0eb81cd78ae1> in <module>
+----> 1 circuit.x(cr=[0])
+
+C:\ProgramData\Anaconda3\lib\site-packages\qiskit\util.py in wrapper(*args, **kwargs)
+    107             if kwargs:
+    108                 _rename_kwargs(func.__name__, kwargs, kwarg_map)
+--> 109             return func(*args, **kwargs)
+    110         return wrapper
+    111     return decorator
+
+TypeError: x() got an unexpected keyword argument 'cr'
+circuit.cx(qr=[1],cr[0])
+  File "<ipython-input-23-d689c3cd14e7>", line 1
+    circuit.cx(qr=[1],cr[0])
+                     ^
+SyntaxError: positional argument follows keyword argument
+circuit.draw()
+      ┌───┐
+q0_0: ┤ H ├
+      └───┘
+q0_1: ─────
+           
+c0_0: ═════
+           
+c0_1: ═════
+           
+circuit.h(cr=[0])
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-25-a7de19caf80c> in <module>
+----> 1 circuit.h(cr=[0])
+
+C:\ProgramData\Anaconda3\lib\site-packages\qiskit\util.py in wrapper(*args, **kwargs)
+    107             if kwargs:
+    108                 _rename_kwargs(func.__name__, kwargs, kwarg_map)
+--> 109             return func(*args, **kwargs)
+    110         return wrapper
+    111     return decorator
+
+TypeError: h() got an unexpected keyword argument 'cr'
+circuit.h(qr=1)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-26-fee1eff7e578> in <module>
+----> 1 circuit.h(qr=1)
+
+C:\ProgramData\Anaconda3\lib\site-packages\qiskit\util.py in wrapper(*args, **kwargs)
+    107             if kwargs:
+    108                 _rename_kwargs(func.__name__, kwargs, kwarg_map)
+--> 109             return func(*args, **kwargs)
+    110         return wrapper
+    111     return decorator
+
+TypeError: h() got an unexpected keyword argument 'qr'
+circuit.cx(qr[0,qr[1])
+  File "<ipython-input-29-bcf050d7a195>", line 1
+    circuit.cx(qr[0,qr[1])
+                         ^
+SyntaxError: invalid syntax
+circuit.cx(qr[0],qr[1])
+---------------------------------------------------------------------------
+CircuitError                              Traceback (most recent call last)
+<ipython-input-30-47168bc7aa4a> in <module>
+----> 1 circuit.cx(qr[0],qr[1])
+
+C:\ProgramData\Anaconda3\lib\site-packages\qiskit\util.py in wrapper(*args, **kwargs)
+    107             if kwargs:
+    108                 _rename_kwargs(func.__name__, kwargs, kwarg_map)
+--> 109             return func(*args, **kwargs)
+    110         return wrapper
+    111     return decorator
+
+C:\ProgramData\Anaconda3\lib\site-packages\qiskit\extensions\standard\x.py in cx(self, control_qubit, target_qubit, ctl, tgt)
+    266        *, ctl=None, tgt=None):  # pylint: disable=unused-argument
+    267     """Apply :class:`~qiskit.extensions.standard.CXGate`."""
+--> 268     return self.append(CXGate(), [control_qubit, target_qubit], [])
+    269 
+    270 
+
+C:\ProgramData\Anaconda3\lib\site-packages\qiskit\circuit\quantumcircuit.py in append(self, instruction, qargs, cargs)
+    471         instructions = InstructionSet()
+    472         for (qarg, carg) in instruction.broadcast_arguments(expanded_qargs, expanded_cargs):
+--> 473             instructions.add(self._append(instruction, qarg, carg), qarg, carg)
+    474         return instructions
+    475 
+
+C:\ProgramData\Anaconda3\lib\site-packages\qiskit\circuit\quantumcircuit.py in _append(self, instruction, qargs, cargs)
+    495         # do some compatibility checks
+    496         self._check_dups(qargs)
+--> 497         self._check_qargs(qargs)
+    498         self._check_cargs(cargs)
+    499 
+
+C:\ProgramData\Anaconda3\lib\site-packages\qiskit\circuit\quantumcircuit.py in _check_qargs(self, qargs)
+    570             raise CircuitError("qarg is not a Qubit")
+    571         if not all(self.has_register(i.register) for i in qargs):
+--> 572             raise CircuitError("register not in this circuit")
+    573 
+    574     def _check_cargs(self, cargs):
+
+CircuitError: 'register not in this circuit'
+circuit.h(qr[0])
+<qiskit.circuit.instructionset.InstructionSet at 0x23892122c48>
+circuit.cx(qr[0],qr[1])
+<qiskit.circuit.instructionset.InstructionSet at 0x2389317e688>
+circuit.draw(output='mpl')
+
+circuit.measure(qr,cr)
+<qiskit.circuit.instructionset.InstructionSet at 0x2389324f848>
+circuit.draw(output='mpl')
+
+simulator =Aer.get_backened('qasm_simulator')
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-52-efbcd578ef75> in <module>
+----> 1 simulator =Aer.get_backened('qasm_simulator')
+
+AttributeError: 'AerProvider' object has no attribute 'get_backened'
+simulator =Aer.get_backend('qasm_simulator')
+execute(circuit, simulator=backend)
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-54-93d4acea8a8c> in <module>
+----> 1 execute(circuit, simulator=backend)
+
+NameError: name 'backend' is not defined
+result = execute(circuit , backend = simulator).result()
+from qiskit.tools.visualization import plot_histogram
+plot_histogram(result.get_counts(circuit))
+
+IBMQ.load_account()
+<AccountProvider for IBMQ(hub='ibm-q', group='open', project='main')>
+provider = IBMQ.get_provider('ibm-q')
+qcomp = provider.get_backend('ibmq_16_melbourne')
+job=execute(circuit,backend=qcomp)
+from qiskit.tools.monitor import job_monitor
+job_monitor(job)
+Job Status: job has successfully run
+result=job.result()
+plot_histogram(result.get_counts(circuit))
+
+ 
